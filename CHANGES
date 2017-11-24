@@ -1,0 +1,8 @@
+python-kairosdb -- KairosDB REST API python client and interface
+================================================================
+
+Contact: Denis Pompilio (jawa) <denis.pompilio@gmail.com>
+https://github.com/outini/pymailq
+
+=== v0.1.0 24/11/2017 ===
+    * Initial release of python-kairosdb.
