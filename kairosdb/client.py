@@ -107,10 +107,21 @@ class KairosDBAPIClient(object):
         # If API returns an error, we simply raise and let caller handle it
         response.raise_for_status()
 
+        if response.status_code == 204:
+            return {
+                'return_code': response.status_code,
+                'status': 'success'
+            }
+
         try:
-            return response.json()
+            response_data = {'return_code': response.status_code}
+            response_data.update(response.json())
+            return response_data
         except ValueError:
-            return {'content': response.text}
+            return {
+                'return_code': response.status_code,
+                'response': response.text
+            }
 
 
 class KairosDBAPIEndPoint(object):
