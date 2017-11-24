@@ -8,7 +8,9 @@ python-kairosdb -- KairosDB REST API python client and interface
 
 
 The :mod:`kairosdb` package provides an intuitive and easy to use interface to
-KairosDB REST API.
+KairosDB REST API. It defines the following attribute:
+
+    .. autodata:: VERSION
 
 .. toctree::
     :maxdepth: 1
