@@ -1,4 +1,4 @@
-|PythonPIP|_ |PythonSupport|_ |License|_
+|PythonPIP|_ |PythonSupport|_ |License|_ |RTFD|_
 
 kairosdb - Python library to interface the KairosDB REST API (kairosdb.github.io)
 =================================================================================
@@ -35,3 +35,5 @@ License
 .. _Codacy: https://www.codacy.com/app/outini/python-kairosdb
 .. |Coverage| image:: https://api.codacy.com/project/badge/Coverage/
 .. _Coverage: https://www.codacy.com/app/outini/python-kairosdb
+.. |RTFD| image:: https://readthedocs.org/projects/python-kairosdb/badge/?version=latest
+.. _RTFD: http://python-kairosdb.readthedocs.io/en/latest/?badge=latest
