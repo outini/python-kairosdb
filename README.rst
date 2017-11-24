@@ -13,7 +13,17 @@ Please read also: https://kairosdb.github.io/docs/build/html/restapi/index.html.
 Installation
 ------------
 
-To be documented
+
+Install python-kairosdb module from https://pypi.python.org::
+
+    pip install python-kairosdb
+
+Install python-kairosdb module from sources::
+
+    python setup.py install
+
+Debian binary packages are also available. See the *packaging* directory for
+more information.
 
 Documentation
 -------------
