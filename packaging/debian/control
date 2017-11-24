@@ -1,0 +1,19 @@
+Source: python-kairosdb
+Maintainer: Denis Pompilio <denis.pompilio@gmail.com>
+Section: python
+X-Python-Version: >= 3.4
+Priority: optional
+Build-Depends: debhelper (>= 9), dh-python, python3-all,
+               python-setuptools, python3-setuptools,
+               wget, ca-certificates, lsb-release
+
+Package: python3-kairosdb
+Architecture: all
+Homepage: https://github.com/outini/python-kairosdb
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: KairosDB REST API python client and interface
+ This package provides a simple python library to interface the KairosDB REST
+ API. Please read also:
+ https://kairosdb.github.io/docs/build/html/restapi/index.html.
+ .
+ This package installs the library for Python 3.

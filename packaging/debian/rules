@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+#export DH_VERBOSE = 1
+
+export PYBUILD_NAME=python-kairosdb
+export PYBUILD_SYSTEM=distutils
+export PYBUILD_DESTDIR_python3=debian/python3-kairosdb/
+
+VERSION = 0.1.0
+DISTRIBUTION = $(shell lsb_release -sr)
+PACKAGEVERSION = $(VERSION)-0~$(DISTRIBUTION)0
+TARBALL = v$(VERSION).tar.gz
+URL = https://github.com/outini/python-kairosdb/archive/$(TARBALL)
+
+%:
+	dh $@ --with python3 --buildsystem pybuild
+
+override_dh_auto_clean:
+	wget -N --progress=dot:mega $(URL)
+	tar --strip-components=1 -xzf $(TARBALL)
+
+override_dh_auto_test:
+override_dh_gencontrol:
+	dh_gencontrol -- -v$(PACKAGEVERSION)

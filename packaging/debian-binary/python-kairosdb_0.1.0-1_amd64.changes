@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Fri, 24 Nov 2017 12:02:55 +0200
+Source: python-kairosdb
+Binary: python3-kairosdb
+Architecture: all
+Version: 0.1.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: Denis Pompilio <denis.pompilio@gmail.com>
+Changed-By: Denis Pompilio <denis.pompilio@gmail.com>
+Description: 
+ python3-kairosdb - KairosDB REST API python client and interface
+Changes: 
+ python-kairosdb (0.1.0-1) unstable; urgency=low
+ .
+   * Initial release of python-kairosdb.
+Checksums-Sha1: 
+ 13e372ee79a4df45bf14776cd4208f0f0b930762 5918 python3-kairosdb_0.1.0-0~17.30_all.deb
+Checksums-Sha256: 
+ b17c568d10fc4bb7ace654d9d7f9d751786667feea6328195eeb8f2dc33469bc 5918 python3-kairosdb_0.1.0-0~17.30_all.deb
+Files: 
+ 7b553e9876ea5d1626c39e8bed74eb43 5918 python optional python3-kairosdb_0.1.0-0~17.30_all.deb
