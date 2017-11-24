@@ -1,3 +1,4 @@
+# coding: utf-8
 #
 #  KairosDB REST API python client and interface (python-kairosdb)
 #

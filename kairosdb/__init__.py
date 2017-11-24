@@ -1,3 +1,4 @@
+# coding: utf-8
 #
 #  KairosDB REST API python client and interface (python-kairosdb)
 #
@@ -17,6 +18,10 @@
 #  program; if not, see <https://opensource.org/licenses/MIT>.
 
 from kairosdb import client
+
+
+#: Current version of the package as :class:`str`.
+VERSION = "0.1.0"
 
 
 class KairosDBAPI(client.KairosDBAPIEndPoint):
