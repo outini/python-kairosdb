@@ -21,6 +21,48 @@ from kairosdb import client
 
 class KairosDBAPI(client.KairosDBAPIEndPoint):
     """KairosDB API interface
+
+    .. attribute:: version
+
+        KairosDB version from API.
+
+        .. seealso:: \
+            https://kairosdb.github.io/docs/build/html/restapi/Version.html
+
+    .. attribute:: health_status
+
+        KairosDB health status from API.
+
+        .. seealso:: \
+            https://kairosdb.github.io/docs/build/html/restapi/Health.html
+
+    .. attribute:: health_check
+
+        KairosDB health check from API.
+
+        .. seealso:: \
+            https://kairosdb.github.io/docs/build/html/restapi/Health.html
+
+    .. attribute:: metricnames
+
+        KairosDB metric names from API.
+
+        .. seealso:: \
+            https://kairosdb.github.io/docs/build/html/restapi/ListMetricNames.html
+
+    .. attribute:: tagnames
+
+        KairosDB tag names from API.
+
+        .. seealso:: \
+            https://kairosdb.github.io/docs/build/html/restapi/ListTagNames.html
+
+    .. attribute:: tagvalues
+
+        KairosDB tag values from API.
+
+        .. seealso:: \
+            https://kairosdb.github.io/docs/build/html/restapi/ListTagValues.html
     """
 
     def __init__(self, *args, **kwargs):
@@ -61,6 +103,10 @@ class KairosDBAPI(client.KairosDBAPIEndPoint):
         """Get metrics data points
 
         :param dict data: Data to post for query
+        :return: Metric data points as :class:`dict`
+
+        .. seealso:: \
+            https://kairosdb.github.io/docs/build/html/restapi/QueryMetrics.html
         """
         return self._post('datapoints/query', data=data)
 
@@ -68,12 +114,18 @@ class KairosDBAPI(client.KairosDBAPIEndPoint):
         """Delete a metric and all data points associated with the metric
 
         :param str metric_name: Name of the metric to delete
+
+        .. seealso:: \
+            https://kairosdb.github.io/docs/build/html/restapi/DeleteMetric.html
         """
-        self._delete('metric/%s' % metric_name)
+        return self._delete('metric/%s' % metric_name)
 
     def delete_datapoints(self, data):
         """Delete metric data points
 
         :param dict data: Data to post for query
+
+        .. seealso:: \
+            https://kairosdb.github.io/docs/build/html/restapi/DeleteDataPoints.html
         """
         return self._post('datapoints/delete', data=data)
