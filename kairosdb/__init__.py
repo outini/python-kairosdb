@@ -17,11 +17,46 @@
 #  You should have received a copy of the MIT License along with this
 #  program; if not, see <https://opensource.org/licenses/MIT>.
 
+import logging
+import fnmatch
+from logging.handlers import SysLogHandler
 from kairosdb import client
 
 
 #: Current version of the package as :class:`str`.
 VERSION = "0.1.0"
+
+#: Basic logger for KairosDB interface module
+LOG = None
+
+
+def basic_logger():
+    """Configure a basic logger for KairosDB interface
+
+    :return: Logger object
+    """
+    if not LOG:
+        logger = logging.getLogger('kairosdb')
+        logger.setLevel(logging.DEBUG)
+
+        fmt_syslog = logging.Formatter(
+            '%(module)s %(processName)s %(levelname)s: %(message)s')
+        fmt_stream = logging.Formatter(
+            '%(processName)s %(levelname)s: %(message)s')
+
+        stream_handler = logging.StreamHandler()
+        stream_handler.setFormatter(fmt_stream)
+        logger.addHandler(stream_handler)
+
+        syslog_handler = SysLogHandler(address='/dev/log')
+        syslog_handler.setFormatter(fmt_syslog)
+        syslog_handler.setLevel(logging.INFO)
+        logger.addHandler(syslog_handler)
+
+        global LOG
+        LOG = logger
+
+    return LOG
 
 
 class KairosDBAPI(client.KairosDBAPIEndPoint):
