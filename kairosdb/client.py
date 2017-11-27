@@ -104,9 +104,6 @@ class KairosDBAPIClient(object):
                                           verify=self.verify,
                                           **kwargs)
 
-        # If API returns an error, we simply raise and let caller handle it
-        response.raise_for_status()
-
         if response.status_code == 204:
             return {
                 'return_code': response.status_code,
