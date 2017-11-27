@@ -1,4 +1,4 @@
-python-kairosdb (0.1.0-1) unstable; urgency=low
+python-kairosdb (0.2.0-1) unstable; urgency=low
 
   * Update to upstream version v0.2.0
   * [bug] Error codes from API are now correctly handled and returned

@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Mon, 27 Nov 2017 17:53:04 +0100
+Source: python-kairosdb
+Binary: python3-kairosdb
+Architecture: all
+Version: 0.2.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: Denis Pompilio <denis.pompilio@gmail.com>
+Changed-By: Denis Pompilio <denis.pompilio@gmail.com>
+Description: 
+ python3-kairosdb - KairosDB REST API python client and interface
+Changes: 
+ python-kairosdb (0.2.0-1) unstable; urgency=low
+ .
+   * Update to upstream version v0.2.0
+   * [bug] Error codes from API are now correctly handled and returned
+   * Added basic logger to KairosDB API interface
+   * Added  search_metrics method to KairosDB API interface
+Checksums-Sha1: 
+ 139c915d9f78b3ccc89a0dc95847f095dca5e9d0 6710 python3-kairosdb_0.2.0-0~17.30_all.deb
+Checksums-Sha256: 
+ faee5fee5279eac1263020a0b4cf7f15874b3aaaf16a791dfc6161907db24a40 6710 python3-kairosdb_0.2.0-0~17.30_all.deb
+Files: 
+ 983d344eaeb5365c45b58644588b686c 6710 python optional python3-kairosdb_0.2.0-0~17.30_all.deb
