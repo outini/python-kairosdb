@@ -11,6 +11,9 @@ The :mod:`kairosdb` package provides an intuitive and easy to use interface to
 KairosDB REST API. It defines the following attribute:
 
     .. autodata:: VERSION
+    .. autodata:: LOG
+
+    .. autofunction:: basic_logger
 
 .. toctree::
     :maxdepth: 1
