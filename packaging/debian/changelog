@@ -1,5 +1,14 @@
 python-kairosdb (0.1.0-1) unstable; urgency=low
 
+  * Update to upstream version v0.2.0
+  * [bug] Error codes from API are now correctly handled and returned
+  * Added basic logger to KairosDB API interface
+  * Added  search_metrics method to KairosDB API interface
+
+ -- Denis Pompilio <denis.pompilio@gmail.com>  Mon, 27 Nov 2017 17:53:04 +0100
+
+python-kairosdb (0.1.0-1) unstable; urgency=low
+
   * Initial release of python-kairosdb.
 
  -- Denis Pompilio <denis.pompilio@gmail.com>  Fri, 24 Nov 2017 12:02:55 +0200
