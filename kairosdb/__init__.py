@@ -109,6 +109,10 @@ class KairosDBAPI(client.KairosDBAPIEndPoint):
         """Initialization method"""
         super(KairosDBAPI, self).__init__(*args, **kwargs)
 
+        self._metricnames = None
+        self._tagnames = None
+        self._tagvalues = None
+
     @property
     def version(self):
         """KairosDB version"""
@@ -127,17 +131,43 @@ class KairosDBAPI(client.KairosDBAPIEndPoint):
     @property
     def metricnames(self):
         """Metric names"""
-        return self._get('metricnames').get('results')
+        if not self._metricnames:
+            self._metricnames = self._get('metricnames').get('results')
+        return self._metricnames
 
     @property
     def tagnames(self):
         """Tag names"""
-        return self._get('tagnames').get('results')
+        if not self._tagnames:
+            self._tagnames = self._get('tagnames').get('results')
+        return self._tagnames
 
     @property
     def tagvalues(self):
         """Tag values"""
-        return self._get('tagvalues').get('results')
+        if not self._tagvalues:
+            self._tagvalues = self._get('tagvalues').get('results')
+        return self._tagvalues
+
+    def search_metrics(self, matches, exclude_matches=None):
+        """Search KairosDB metrics using glob matches
+
+        :param list matches: List of glob matches
+        :param list exclude_matches: List of glob matches for exclusions
+        :return: Matched metric names as :func:`list`
+        """
+        x_metrics = []
+        [x_metrics.extend(fnmatch.filter(self.metricnames, match))
+         for match in exclude_matches]
+        x_metrics = set(x_metrics)
+
+        matched_metrics = []
+        for match in matches:
+            for metric in fnmatch.filter(self.metricnames, match):
+                if metric not in x_metrics:
+                    matched_metrics.append(metric)
+
+        return matched_metrics
 
     def query_metrics(self, data):
         """Get metrics data points
