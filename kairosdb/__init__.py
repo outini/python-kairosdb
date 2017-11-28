@@ -157,9 +157,11 @@ class KairosDBAPI(client.KairosDBAPIEndPoint):
         :return: Matched metric names as :func:`list`
         """
         x_metrics = []
-        [x_metrics.extend(fnmatch.filter(self.metricnames, match))
-         for match in exclude_matches]
-        x_metrics = set(x_metrics)
+
+        if exclude_matches:
+            [x_metrics.extend(fnmatch.filter(self.metricnames, match))
+             for match in exclude_matches]
+            x_metrics = set(x_metrics)
 
         matched_metrics = []
         for match in matches:
