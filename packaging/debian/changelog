@@ -1,3 +1,11 @@
+python-kairosdb (0.2.1-1) unstable; urgency=low
+
+  * Update to upstream version v0.2.1
+  * [bug] Fixing crash when excluded patterns are not specified in
+    search metrics method
+
+ -- Denis Pompilio <denis.pompilio@gmail.com>  Tue, 28 Nov 2017 16:08:50 +0100
+
 python-kairosdb (0.2.0-1) unstable; urgency=low
 
   * Update to upstream version v0.2.0

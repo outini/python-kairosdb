@@ -1,0 +1,24 @@
+Format: 1.8
+Date: Tue, 28 Nov 2017 16:08:50 +0100
+Source: python-kairosdb
+Binary: python3-kairosdb
+Architecture: all
+Version: 0.2.1-1
+Distribution: unstable
+Urgency: low
+Maintainer: Denis Pompilio <denis.pompilio@gmail.com>
+Changed-By: Denis Pompilio <denis.pompilio@gmail.com>
+Description: 
+ python3-kairosdb - KairosDB REST API python client and interface
+Changes: 
+ python-kairosdb (0.2.1-1) unstable; urgency=low
+ .
+   * Update to upstream version v0.2.1
+   * [bug] Fixing crash when excluded patterns are not specified in
+     search metrics method
+Checksums-Sha1: 
+ 31322cea9b3ea00d0b41e08c0e1510c8df9aab7a 6788 python3-kairosdb_0.2.1-0~17.30_all.deb
+Checksums-Sha256: 
+ c5ee10b72c2589ed69f1af37ec5dc6a0e052ab5a1fd9380a4a4199f01b8b0a98 6788 python3-kairosdb_0.2.1-0~17.30_all.deb
+Files: 
+ 53c865ff5417d9bac27c5e40b1561a48 6788 python optional python3-kairosdb_0.2.1-0~17.30_all.deb
