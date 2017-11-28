@@ -4,6 +4,9 @@ python-kairosdb -- KairosDB REST API python client and interface
 Contact: Denis Pompilio (jawa) <denis.pompilio@gmail.com>
 https://github.com/outini/python-kairosdb
 
+=== v0.2.1 28/11/2017 ===
+    * [bug] Fixing crash when excluded patterns are not specified in search metrics method
+
 === v0.2.0 27/11/2017 ===
     * [bug] Error codes from API are now correctly handled and returned
     * Added basic logger to KairosDB API interface

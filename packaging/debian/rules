@@ -6,7 +6,7 @@ export PYBUILD_NAME=python-kairosdb
 export PYBUILD_SYSTEM=distutils
 export PYBUILD_DESTDIR_python3=debian/python3-kairosdb/
 
-VERSION = 0.2.0
+VERSION = 0.2.1
 DISTRIBUTION = $(shell lsb_release -sr)
 PACKAGEVERSION = $(VERSION)-0~$(DISTRIBUTION)0
 TARBALL = v$(VERSION).tar.gz

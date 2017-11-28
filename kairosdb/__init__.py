@@ -24,7 +24,7 @@ from kairosdb import client
 
 
 #: Current version of the package as :class:`str`.
-VERSION = "0.2.0"
+VERSION = "0.2.1"
 
 #: Basic logger for KairosDB interface module
 LOG = None
